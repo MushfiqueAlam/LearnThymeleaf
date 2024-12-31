@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example of loop</title>
+</head>
+<body>
+<h1>Going to iterate  a loop</h1>
+<h2>Yes We are <span th:text="${names}"></span></h2>
+
+<ul>
+  <li th:each="n,status:${names}">
+    <span th:style="${status.odd}?'color:blue;font:weight':' ' " th:text="${status.index+1}+' '+${n}"></span>
+  </li>
+</ul>
+
+</body>
+</html>

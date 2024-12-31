@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Statement </title>
+</head>
+<body>
+<h1>This is condition statement chapter</h1>
+
+<!--it is Elvis Operator-->
+<h2>Use is <span th:style="${isActive}?'color:green':'color:brown'" th:text="${isActive}?'Active':'No Active'"></span></h2>
+
+<!--Using if-Unless-->
+<h2 th:if="${gender}=='M'">Male</h2>
+<h2 th:unless="${gender}=='M'">Female</h2>
+
+<!--Using Switch-->
+<div th:switch="${#lists.size(mylist)}">
+<h2 th:case="'0'">List contains zero element</h2>
+  <h2 th:case="'1'">List contain 1 element</h2>
+  <h2 th:case="*">List contains more than one element</h2>
+</div>
+</body>
+</html>
